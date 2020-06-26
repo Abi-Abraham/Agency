@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Righteous&family=Roboto&display=swap");
+@import "./breakpoints.scss";
+@import "./styles/sideNav.scss";
+@import "./styles/header.scss";
+@import "./styles/hambureger.scss";
+@import "./styles/wedo.scss";
+@import "./styles/workSection.scss";
+@import "./styles/testimonial.scss";
+@import "./styles/team.scss";
+@import "./styles/footer.scss";
+@import "./styles/navigation.scss";
+@import "./pages/page-styles/work-page.scss";
+@import "./styles/PageTitle.scss";
+@import "./styles/contact-form.scss";
+@import "./pages/page-styles/about-page.scss";
+@import "./pages/page-styles/contact-page-styles.scss";
+
+body,
+html {
+  visibility: hidden;
+  user-select: none;
+  overscroll-behavior: none;
+  font-family: "Poppins";
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}

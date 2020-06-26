@@ -1,0 +1,57 @@
+.side-nav {
+  .brand {
+    transform: rotate(-90deg);
+    position: fixed;
+    left: -6vh;
+    top: 13vh;
+    padding: 15px;
+    z-index: 10;
+    cursor: pointer;
+    overflow: hidden;
+    mix-blend-mode: difference;
+    @include media("<=phone") {
+      transform: rotate(0deg);
+      top: 0;
+      left: 0;
+    }
+    @include media("<=tablet") {
+      transform: rotate(0deg);
+      top: 0;
+      left: 0;
+    }
+    a {
+      color: unset;
+      text-decoration: none;
+      .brand-name {
+        font-size: 25px;
+        font-family: "Righteous";
+        letter-spacing: 2px;
+        mix-blend-mode: difference;
+        @include media("<=phone") {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  .contact-link {
+    transform: rotate(-90deg);
+    position: fixed;
+    bottom: 10vh;
+    padding: 20px;
+    overflow: hidden;
+    font-family: "Roboto";
+    cursor: pointer;
+    left: -3vh;
+    z-index: 5;
+    mix-blend-mode: difference;
+    @include media("<=phone") {
+      display: none;
+    }
+    @include media("<=tablet") {
+      display: none;
+    }
+    .contact-click {
+      font-size: 18px;
+    }
+  }
+}

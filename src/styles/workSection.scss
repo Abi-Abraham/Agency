@@ -1,0 +1,149 @@
+.work-section {
+  visibility: hidden;
+  margin-top: 8rem;
+  .container {
+    .work-title {
+      margin-top: 5rem;
+      margin-bottom: 6rem;
+      @include media("<=phone") {
+        margin-top: 3rem;
+      }
+      @include media("<=tablet") {
+        margin-top: 3rem;
+      }
+      h2 {
+        overflow: hidden;
+        .title-tag-inner {
+          font-size: 3.5rem;
+          text-align: center;
+          font-family: "Righteous";
+          transform: translateY(80px);
+          opacity: 0;
+          @include media("<=phone") {
+            font-size: 2rem;
+          }
+          @include media("<=tablet") {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .row {
+      .col-md-6 {
+        margin-bottom: 6rem;
+        @include media("<=tablet") {
+          margin-bottom: 1.5rem;
+        }
+
+        &:nth-child(even) {
+          position: relative;
+          top: 100px;
+          @include media("<=tablet") {
+            top: 0px;
+          }
+        }
+
+        .work-details {
+          position: relative;
+          text-align: -webkit-center;
+          .work-img {
+            width: 55%;
+            position: relative;
+            // box-shadow: 16px 25px 47px -7px #0000005c;
+            overflow: hidden;
+            @include media("<=tablet") {
+              width: 90%;
+            }
+            .work-overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: white;
+              z-index: 1;
+            }
+            img {
+              width: 100%;
+              transform: scale(1.5);
+            }
+            .work-content {
+              position: absolute;
+              top: 0;
+              right: -40%;
+              width: 80%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              @include media("<=tablet") {
+                right: 0%;
+                align-items: flex-end;
+              }
+              .work-content-inner {
+                background: #ffffffd9;
+                padding: 15px;
+                overflow: hidden;
+                transform: translateX(-130px);
+                opacity: 0;
+              }
+              .did-work-title {
+                font-family: "Righteous";
+                letter-spacing: 1px;
+                margin-bottom: 15px;
+                text-align: left;
+              }
+              .work-description {
+                text-align: left;
+                display: -webkit-box;
+                -webkit-line-clamp: 8;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 2px;
+                margin: 0;
+              }
+              .work-deatils-button {
+                text-align: right;
+                margin-top: 15px;
+                button {
+                  background: none;
+                  border: 0;
+                  font-family: "Roboto";
+                  font-size: 14px;
+                  letter-spacing: 2px;
+                  color: #101010;
+                  font-weight: 600;
+                  padding: 4px 15px;
+                  position: relative;
+                  z-index: 1;
+                  transition: 0.5s all ease-out;
+                  &:focus {
+                    outline: none;
+                  }
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: #d6d6d6;
+                    left: -25px;
+                    top: 0;
+                    z-index: -1;
+                    transition: 0.5s all ease-out;
+                  }
+                  &:hover {
+                    letter-spacing: 3px;
+                    &::after {
+                      left: 25px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

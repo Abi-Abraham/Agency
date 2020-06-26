@@ -1,0 +1,128 @@
+.nav-bar {
+  height: 0vh;
+  overflow: hidden;
+  background: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .container {
+    .row {
+      .col-md-7 {
+        .main-links {
+          a {
+            text-decoration: none;
+            color: white;
+            h3 {
+              font-family: "Righteous";
+              width: min-content;
+              letter-spacing: 2px;
+              position: relative;
+              overflow: hidden;
+              transition: 0.3s all ease-in;
+              overflow: hidden;
+              @include media("<=tablet") {
+                width: 100%;
+                text-align: center;
+              }
+
+              .link-tag {
+                font-size: 5rem;
+                transform: translateY(-100px);
+                transition: 0.5s all ease-out;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 52%;
+                  height: 10px;
+                  width: 0%;
+                  transition: 0.5s all ease-out;
+                  background: black;
+                  right: 0;
+                }
+                &:hover {
+                  letter-spacing: 4px;
+                  &::before {
+                    width: 100%;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          .nav-active {
+            color: #ffffff29;
+            h3 {
+              letter-spacing: 4px;
+              .link-tag {
+                &::before {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .col-md-5 {
+        display: flex;
+        align-items: flex-end;
+        @include media("<=tablet") {
+          display: none;
+        }
+        .location-box {
+          padding: 20px;
+          transform: translateY(-50px);
+          opacity: 0;
+          .location-title {
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-family: "Righteous";
+            color: rgba(255, 255, 255, 0.267);
+            margin-bottom: 20px;
+          }
+          .address {
+            color: rgba(255, 255, 255, 0.267);
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+          }
+          .contact-num {
+            color: rgba(255, 255, 255, 0.267);
+            font-family: "Righteous";
+            font-size: 20px;
+            letter-spacing: 2px;
+            span {
+              transition: 0.3s all ease-out;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .row {
+      .col-md-7 {
+        .nav-social-media {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 2rem;
+          a {
+            color: rgba(255, 255, 255, 0.267);
+            letter-spacing: 2px;
+            transition: 0.3s all ease-out;
+            opacity: 0;
+            &:hover {
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.testimonial-section {
+  margin-top: 1rem;
+  overflow: hidden;
+  visibility: hidden;
+  @include media("<=phone") {
+    margin-top: 4rem;
+  }
+  @include media("<=tablet") {
+    margin-top: 4rem;
+  }
+  .container {
+    .testimonial-title {
+      margin-top: 5rem;
+      margin-bottom: 8rem;
+      @include media("<=phone") {
+        margin-top: 3rem;
+      }
+      @include media("<=tablet") {
+        margin-top: 3rem;
+      }
+      .testimonial-title-tag {
+        overflow: hidden;
+        .testimonial-title-tag-inner {
+          font-size: 3.5rem;
+          text-align: center;
+          font-family: "Righteous";
+          transform: translateY(80px);
+          opacity: 0;
+          @include media("<=phone") {
+            font-size: 2rem;
+          }
+          @include media("<=tablet") {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .testimonial-row {
+      position: relative;
+      .testimonial-bg {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        opacity: 0;
+        filter: grayscale(2);
+        img {
+          width: 100%;
+        }
+      }
+      .tesitimonial-column {
+        .test-monial-box {
+          background: #f3f3f3;
+          position: relative;
+          border-radius: 3px;
+          padding: 20px;
+          padding-top: 70px;
+          margin: 20px 0;
+          opacity: 0;
+          .reaviewer-img {
+            position: absolute;
+            top: -50px;
+            right: 20px;
+            background: white;
+            padding: 7px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              transform: scale(1.4);
+            }
+          }
+          .reaviewer-img.left-one {
+            right: unset;
+          }
+          p {
+            font-size: 14px;
+            letter-spacing: 2px;
+            line-height: 20px;
+            margin: 5px 0;
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          .reviewer-name {
+            text-align: right;
+            opacity: 0;
+            transform: translateY(20px);
+            small {
+              color: #101010;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

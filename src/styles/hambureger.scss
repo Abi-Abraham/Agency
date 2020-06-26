@@ -1,0 +1,51 @@
+.hamburger-main {
+  position: fixed;
+  top: 5vh;
+  right: 6vh;
+  z-index: 10;
+  @include media("<=phone") {
+    top: 3vh;
+    right: 3vh;
+  }
+  @include media("<=tablet") {
+    top: 3vh;
+    right: 3vh;
+  }
+  .hamburger-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s all ease-out;
+
+    span {
+      transition: 0.3s all ease-out;
+      width: 100%;
+      height: 2px;
+      background: black;
+      margin: 5px 0;
+      @include media("<=phone") {
+        width: 80%;
+        margin: 3px 0;
+      }
+      @include media("<=tablet") {
+        width: 80%;
+        margin: 3px 0;
+      }
+    }
+    &:hover {
+      span {
+        &:first-child {
+          transform: translateX(-10px);
+        }
+        &:last-child {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}
